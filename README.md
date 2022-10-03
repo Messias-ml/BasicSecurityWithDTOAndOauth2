@@ -273,6 +273,20 @@ spring security e oauth 2 no pom.xml
 
 > > configure(WebSecurity web): este metodo é responsavel por dizer quais urls o spring security não precisa analisar.
 
+<h4>**Configuração de segurança atualizada**<h4>
+LOCAL--> ConfiguracaoSegurancaAtualizado
+>substituindo configure(HttpSecurity http):
+> > Para substitui-lo utilizamos filterChain que retorna um SecurityFilterChain e recebe como parametro um HttpSecurity 
+<br> OBS: utilizamos no retorno o nome da variavel http.build() (varivavel é http por exemplo)
+assim ele vai retornar o build que você fez.
+>
+> substituindo configure(AuthenticationManagerBuilder auth)
+> > Este no caso é somente usarmos o password ecoder com o bean que ele ja vai buscar o usuario logado na aplicação, pois o usuario logado vai ser gerenciado por um bean do spring, neste caso o @Service, então o proprio spring ja entende.
+>
+> sustituindo o configure(WebSecurity web)
+> > public WebSecurityCustomizer webSecurityCustomizer() <br> Com este metodo podemos fazer uma lambda expression e retornar o proprio web que vai chegar para ele com os antMatcher que queremos ignorar como mostra no codigo.
+
+
 <h4>LOGANDO NA APLICAÇÃO</h4>
 Para logarmos na aplicação vamos utilizar a url /oauth/token
 <br> É um padrão que utilizamos quando trabalhamos com oauth2.
