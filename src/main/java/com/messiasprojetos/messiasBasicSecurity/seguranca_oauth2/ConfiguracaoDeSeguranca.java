@@ -16,7 +16,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /*CONFIGURAÇÃO PARA HABILITAR OAUTH2
 @EnableAuthorizationServer
 @EnableResourceServer*/
-@EnableWebSecurity
+
+
+//@EnableWebSecurity
 public class ConfiguracaoDeSeguranca extends WebSecurityConfigurerAdapter {
 
     @Autowired
