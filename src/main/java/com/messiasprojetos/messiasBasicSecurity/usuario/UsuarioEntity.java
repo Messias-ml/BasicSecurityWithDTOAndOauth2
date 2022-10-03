@@ -20,6 +20,7 @@ public class UsuarioEntity extends BdEntity {
     @Column(name = "SNH", nullable = false)
     private String senha;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "PRF", nullable = false)
     private Perfi perfil = Perfi.USER;
 }

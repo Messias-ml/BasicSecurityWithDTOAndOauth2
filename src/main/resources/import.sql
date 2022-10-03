@@ -1,0 +1,1 @@
+insert into usuario_entity (nom, prf, snh, id) values ('senhor&senhoraTI', 'ADMIN', '$2a$10$aDjd6is0rgp7MGSeXaPNkO72.VGTgZJpiG.8iSiJWEF54Vv1dbP9K', 0);
