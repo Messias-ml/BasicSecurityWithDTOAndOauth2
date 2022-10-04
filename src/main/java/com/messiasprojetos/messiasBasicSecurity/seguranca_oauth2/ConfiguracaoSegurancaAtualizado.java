@@ -36,5 +36,4 @@ public class ConfiguracaoSegurancaAtualizado {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring().antMatchers("configuration/security", "/h2-console/**");
     }
-
 }
